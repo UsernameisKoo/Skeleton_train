@@ -36,11 +36,12 @@ NTU RGB+D 공식 사이트 또는 원본 레포에서 제공한 링크를 통해
 - 전체 60개 액션 중 **이 프로젝트에서 사용하는 12개 액션만 선택**
 - 학습/검증용 **4개의 데이터 파일**이 자동 생성됩니다.
 
-  <repo_root>/data/NTU-RGB-D/x-view/
-├── small_train_data.npy
-├── small_train_label.pkl
-├── small_val_data.npy
-└── small_val_label.pkl
+<repo_root>/data/NTU-RGB-D/x-view/
+    ├── small_train_data.npy
+    ├── small_train_label.pkl
+    ├── small_val_data.npy
+    └── small_val_label.pkl
+
 
 
 각 파일은 다음 의미를 가집니다:
