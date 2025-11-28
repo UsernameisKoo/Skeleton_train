@@ -10,6 +10,33 @@ NTU RGB+D Skeleton 데이터를 이용해 **빠른 인간 행동(Quick Actions)*
 
 ---
 
+## 🙋‍♂️ My Contributions
+
+이 프로젝트에서 제가 직접 수정·개선한 파일은 아래 두 개입니다:
+
+### **1. `main.ipynb`**  
+ST-GCN 모델 구현 및 학습 성능을 개선하기 위해 다음과 같은 작업을 수행했습니다:
+
+- Dropout 비율 조정: `[0.1, 0.2, 0.3, 0.3, 0.3, 0.3]`  
+- `early_stop_patience` 기능 추가  
+- Gradient Accumulation Step 도입  
+- 스케줄러를 `OneCycleLR`로 변경  
+- 학습 안정성을 위한 `WeightedRandomSampler` 적용  
+- Cross Entropy Loss → **Focal Loss**로 변경  
+→ 이를 통해 모델의 학습 안정성과 성능이 전반적으로 개선되었습니다.
+
+---
+
+### **2. `gitclone_dataprocessing.ipynb`**  
+Colab 환경에서의 프로젝트 세팅 및 데이터 전처리를 자동화하기 위해 다음 기능을 구현했습니다:
+
+- GitHub 레포지토리 자동 클론  
+- NTU RGB+D skeleton 데이터의 **train / val / test 분리 추가**  
+- 기존 코드에서 사용하던 **다운샘플링 과정을 제거하여 성능 개선**  
+- Colab 환경에 맞춘 경로 설정 및 데이터 구조 정리  
+
+---
+
 ## 📦 Prerequisites
 - Python 3.6+
 - PyTorch (CUDA 지원 권장)
@@ -23,16 +50,15 @@ NTU RGB+D Skeleton 데이터를 이용해 **빠른 인간 행동(Quick Actions)*
 이 프로젝트는 **NTU-RGB+D (x-view protocol)** 스켈레톤 데이터를 사용합니다.
 
 ### ✔ 1. NTU-RGB+D Skeleton 데이터 준비
-NTU RGB+D 공식 사이트 또는 원본 레포에서 제공한 링크를 통해 데이터를 받습니다.  
-(원본 데이터 자체는 이 레포에는 포함되지 않음)
+
+레포 안의 **`gitclone_preprocessing_data.ipynb`** 를 실행하면:
+NTU RGB+D 의 3D 골격 전처리된 데이터를 다운로드한 후 압축 해제합니다.
 
 ---
 
 ### ✔ 2. 12개 클래스 데이터 생성
 
-레포 안의 **`gitclone_preprocessing_data.ipynb`** 를 실행하면:
-
-- NTU RGB+D skeleton 데이터 전체 60개 액션 중 **이 프로젝트에서 사용하는 12개 액션만 선택**
+- 다운한 NTU RGB+D skeleton 데이터 전체 60개 액션 중 **이 프로젝트에서 사용하는 12개 액션만 선택**
 - 학습/검증/테스트 용 **6개의 데이터 파일**이 자동 생성됩니다.
 
 ---
