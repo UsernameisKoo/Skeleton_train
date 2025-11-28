@@ -32,13 +32,12 @@ NTU RGB+D 공식 사이트 또는 원본 레포에서 제공한 링크를 통해
 
 레포 안의 **`gitclone_preprocessing_data.ipynb`** 를 실행하면:
 
-- NTU RGB+D skeleton 데이터를 **프레임 반으로 다운샘플링**하고
-- 전체 60개 액션 중 **이 프로젝트에서 사용하는 12개 액션만 선택**
-- 학습/검증용 **4개의 데이터 파일**이 자동 생성됩니다.
+- NTU RGB+D skeleton 데이터 전체 60개 액션 중 **이 프로젝트에서 사용하는 12개 액션만 선택**
+- 학습/검증/테스트 용 **6개의 데이터 파일**이 자동 생성됩니다.
 
 ---
 
-### ✔ 3. 생성된 4개 파일의 저장 위치
+### ✔ 3. 생성된 6개 파일의 저장 위치
 
 Notebook 실행 후 데이터는 아래 경로에 저장됩니다:
 
@@ -48,6 +47,8 @@ Notebook 실행 후 데이터는 아래 경로에 저장됩니다:
     ├── small_train_label.pkl
     ├── small_val_data.npy
     └── small_val_label.pkl
+    ├── small_test_data.npy
+    └── small_test_label.pkl
 ```
 
 
@@ -59,6 +60,8 @@ Notebook 실행 후 데이터는 아래 경로에 저장됩니다:
 | `small_train_label.pkl` | 학습용 라벨 |
 | `small_val_data.npy` | 검증용 skeleton 시퀀스 |
 | `small_val_label.pkl` | 검증용 라벨 |
+| `small_test_data.npy` | 테스트용 skeleton 시퀀스 |
+| `small_test_label.pkl` | 테스트용 라벨 |
 
 ---
 
