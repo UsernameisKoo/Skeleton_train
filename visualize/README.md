@@ -7,7 +7,10 @@
 아래는 테스트 데이터셋에서 action label **001**을 선택하여 생성한 예시 영상입니다:
 
 🔗 **샘플 영상:**  
-https://github.com/UsernameisKoo/Skeleton_train/blob/main/visualize/A001_video.mp4
+<video src="https://github.com/UsernameisKoo/Skeleton_train/blob/main/visualize/A001_video.mp4" 
+       width="600" 
+       controls>
+</video>
 
 시각화에는 다음 요소들이 포함됩니다:
 - 기능별 관절 그룹(머리, 몸통, 팔, 손, 다리, 발)에 다른 색상 적용  
