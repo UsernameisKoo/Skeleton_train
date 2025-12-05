@@ -7,10 +7,7 @@
 아래는 테스트 데이터셋에서 action label **001**을 선택하여 생성한 예시 영상입니다:
 
 🔗 **샘플 영상:**  
-<video src="https://raw.githubusercontent.com/UsernameisKoo/Skeleton_train/main/visualize/A001_video.mp4"
-       width="600"
-       controls>
-</video>
+![skeleton-visualization](https://github.com/UsernameisKoo/Skeleton_train/blob/main/visualize/A001_video.gif)
 
 
 시각화에는 다음 요소들이 포함됩니다:
